@@ -6,5 +6,5 @@ namespace VTrack.Listener.Protocols.WondeProud;
 [Service(typeof(IProtocol))]
 public class WondeProudProtocol : BaseProtocol
 {
-    public override int Port => 7046;
+    public override int Port => 3004;
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Text.RegularExpressions;
 using VTrack.Library.DI;
 using VTrack.Listener.Helpers;
@@ -27,7 +28,7 @@ public class WondeProudMessageHandler : BaseMessageHandler<WondeProudProtocol>
         if (locationMatch.Success)
         {
             input.Client.SetDevice(locationMatch.Groups[1].Value);
-                
+            Console.WriteLine("DeviceIMEI: "+ locationMatch.Groups[1].Value);
             Location location = new()
             {
                 Device = input.Client.Device,
